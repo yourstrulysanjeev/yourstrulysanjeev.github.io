@@ -53,7 +53,7 @@
         <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Education</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
       </ul>
-
+      <img src="assets/img/moon.png" id="icon">
     </nav><!-- .nav-menu -->
 
   </header><!-- End Header -->
@@ -603,7 +603,7 @@
               <h4 style="color:rgb(30, 173, 255);">Bachelor of Technology in Electronics & Communication</h4>
               <h5>2015 - 2019</h5>
               <p><em>Guru Nanak Dev University, Amritsar, IN</em></p>
-              <p><strong>Relevant Courses:</strong> Neural Networks and Fuzzy Logic, Computer Architecture and Organization, Wireless Communication, Cloud Computing and Distributed Systems, Digital Sysyem Design(VJDL), Computer Networks, Analysis and Synthesis of Networks, Entrepreneurship and Business Strategy, Fiber Optics, Linear Control Systems, Microwave Engineering, Embedded Systems, and Microprocessors</p>
+              <p><strong>Relevant Courses:</strong> Neural Networks and Fuzzy Logic, Computer Architecture and Organization, Wireless Communication, Cloud Computing and Distributed Systems, Digital Sysyem Design(VHDL), Computer Networks, Analysis and Synthesis of Networks, Entrepreneurship and Business Strategy, Fiber Optics, Linear Control Systems, Microwave Engineering, Embedded Systems, and Microprocessors</p>
         </div>
 
       </div>
@@ -731,7 +731,18 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+<script>
 
+  var icon = document.getElementById("icon");
+
+  icon.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+      icon.src = "assets/img/sun.png";
+    }else{
+      icon.src = "assets/img/moon.png";
+    }
+  }
 
 </script>
 
