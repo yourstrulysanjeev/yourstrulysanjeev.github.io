@@ -27,21 +27,16 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: MyResume
-  * Updated: Jun 13 2023 with Bootstrap v5.3.0
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
 
   <!-- ======= Mobile nav toggle button ======= -->
+  
   <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
   <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
-  <!-- ======= Header ======= -->
+
+   <!-- ======= Header ======= -->
   <header id="header" class="d-flex flex-column justify-content-center">
 
     <nav id="navbar" class="navbar nav-menu">
@@ -52,14 +47,17 @@
         <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
         <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Education</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        <!--<li><img src="assets/img/moon.png" id="icon"></li> -->
+        <div class="header-dark-icon"><img src="assets/img/moon.png" alt ="sam" id="icon"></div>
       </ul>
-      <img src="assets/img/moon.png" id="icon">
+      
     </nav><!-- .nav-menu -->
 
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
+    
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Sanjeev Tripathi</h1>
       <p>I'm <span class="typed" data-typed-items="Data Scientist, Developer, Freelancer, Data Analyst and Engineer"></span></p>
@@ -90,7 +88,7 @@
             <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>  Data Scientist &amp; Developer</h3>
+            <h3 >  Data Scientist &amp; Developer</h3>
             <p class="fst-italic">
               "Step into a world of creativity, innovation, and limitless possibilities. Welcome to my captivating portfolio!"
             </p>
@@ -114,9 +112,13 @@
             </div>
             <p><em>
               I am an experienced Engineer with a strong background in data analysis and a passion for leveraging technology to drive business growth. With expertise in managing and analyzing large datasets, my focus lies in ensuring accuracy and efficiency throughout the data lifecycle. Proficient in coding and data manipulation, I utilize tools like JIRA and Python to extract, clean, and organize data, following Agile methodologies for effective project management.
-              One of my key strengths lies in my knowledge of AI and machine learning techniques, allowing me to build predictive models and recommendation systems that empower data-driven decision-making. I also possess a keen eye for data visualization, employing tools such as Tableau and Power BI to create intuitive and impactful visualizations that effectively communicate insights.
+              One of my key strengths lies in my knowledge of AI and machine learning techniques, allowing me to build predictive models and recommendation systems that empower data-driven decision-making. 
+              I also possess a keen eye for data visualization, employing tools such as Tableau and Power BI to create intuitive and impactful visualizations that effectively communicate insights.
               Throughout my career, I have successfully identified trends, patterns, and valuable insights hidden within complex data, contributing to business growth and informed strategies. With a passion for staying up-to-date with the latest advancements in the field, I continuously strive to enhance my skills and deliver innovative solutions. I am excited to leverage my expertise in data analysis, AI, machine learning, and data visualization to help organizations make data-driven decisions and unlock the true potential of their data. Let's connect and explore how we can drive your business forward through the power of data.
             </em></p>
+            <div class="buttons"style="text-align:center;">
+              <a href="https://drive.google.com/file/d/15AL_bdgdhBq6enCvkbZbwk8WhQST4oij/view" target="blank"><button>Download CV</button></a>
+            </div>
           </div>
         </div>
 
@@ -333,50 +335,73 @@
               <h4>Online Data Analyst</h4>
               <h5>May 2023 - Present</h5>
               <p><em>TELUS International AI-Data Solutions, Freelance, CA </em></p>
-              <ul>
-                <li>Perform in-depth analysis of large datasets using SQL and data visualization tools to derive valuable insights.</li>
-                <li>Utilize statistical techniques and predictive modeling to forecast business metrics and optimize operational performance. </li>
-                <li>Collaborate with cross-functional teams to define key performance indicators (KPIs) and develop dashboards and reports for monitoring and tracking metrics.</li>
-                <li>Ensure data integrity and accuracy through data cleansing, transformation, and quality assurance measures.</li>
-              </ul>
+              <div class="collapsible">
+                 <input type="checkbox" name="collapsible-head" id="first">
+                <label for="first">Responsiblities</label>
+                  <div class="collapsible-text">
+                    <ul>
+                      <li>Perform in-depth analysis of large datasets using SQL and data visualization tools to derive valuable insights.</li>
+                      <li>Utilize statistical techniques and predictive modeling to forecast business metrics and optimize operational performance. </li>
+                      <li>Collaborate with cross-functional teams to define key performance indicators (KPIs) and develop dashboards and reports for monitoring and tracking metrics.</li>
+                      <li>Ensure data integrity and accuracy through data cleansing, transformation, and quality assurance measures.</li>
+                    </ul>
+                  </div>
+              </div>
             </div>
             <div class="resume-item">
               <h4>Data Engineer</h4>
               <h5>Jan 2023 - April 2023</h5>
               <p><em>BETA Technologies, Hybrid, CA </em></p>
-              <ul>
-                <li>Developed reliable data flow processes by utilizing Google Analytics, Python, and advanced Microsoft SQL server queries.</li>
-                <li>Integrated data with Tableau to create impactful visualizations and utilized Microsoft Visio and draw.io to create flowcharts for clear process representation. </li>
-                <li>Prepared comprehensive reports to effectively communicate insights to stakeholders and team leads.</li>
-                <li>Improved data extraction, transformation, and loading from diverse sources, documenting statistical analysis using Microsoft Excel and BETA data systems.</li>
-                <li>Optimized ETL infrastructure for enhanced scalability, deploying production-ready code and utilizing AWS DevOps for automation, leading to a 50% reduction in data processing time.</li>
-                <li>Implemented CI/CD practices in database management, enabling continuous delivery of data integration solutions using Snowflake and GIT.</li>
-
-              </ul>
+              <div class="collapsible">
+                <input type="checkbox" name="collapsible-head" id="second">
+               <label for="second">Responsiblities</label>
+                 <div class="collapsible-text">
+                  <ul>
+                    <li>Developed reliable data flow processes by utilizing Google Analytics, Python, and advanced Microsoft SQL server queries.</li>
+                    <li>Integrated data with Tableau to create impactful visualizations and utilized Microsoft Visio and draw.io to create flowcharts for clear process representation. </li>
+                    <li>Prepared comprehensive reports to effectively communicate insights to stakeholders and team leads.</li>
+                    <li>Improved data extraction, transformation, and loading from diverse sources, documenting statistical analysis using Microsoft Excel and BETA data systems.</li>
+                    <li>Optimized ETL infrastructure for enhanced scalability, deploying production-ready code and utilizing AWS DevOps for automation, leading to a 50% reduction in data processing time.</li>
+                    <li>Implemented CI/CD practices in database management, enabling continuous delivery of data integration solutions using Snowflake and GIT.</li>
+                  </ul>
+                 </div>
+              </div>
             </div>
             <div class="resume-item">
               <h4>AI Data Science Intern</h4>
               <h5>June 2022 - Aug. 2022</h5>
               <p><em>CAE, Montreal, CA</em></p>
-              <ul>
-                <li>Implemented and tested the Biometry Analysis Dashboard and Data Handling for Singapore Airlines using Databricks and Azure DevOps</li>
-                <li>Leveraged cloud computing platforms to train machine learning models with real-time pilot data, resulting in impactful outcomes and a 20% increase in data reliability and extraction efficiency through optimized data flow processes. </li>
-                <li>Created immersive training environments with Power BI, Python, and SQL for pilot instructors using Virtual Reality.</li>
-                <li>Optimized system performance of aircraft through AI/ML techniques, including MIMO, precoding, and beamforming.</li>
-                <li>Improved compression algorithms through ML to enhance multimedia data encoding and decoding, reducing bandwidth requirements.</li>
-              </ul>
+              <div class="collapsible">
+               <input type="checkbox" name="collapsible-head" id="third">
+               <label for="third">Responsiblities</label>
+               <div class="collapsible-text">
+                <ul>
+                  <li>Implemented and tested the Biometry Analysis Dashboard and Data Handling for Singapore Airlines using Databricks and Azure DevOps</li>
+                  <li>Leveraged cloud computing platforms to train machine learning models with real-time pilot data, resulting in impactful outcomes and a 20% increase in data reliability and extraction efficiency through optimized data flow processes. </li>
+                  <li>Created immersive training environments with Power BI, Python, and SQL for pilot instructors using Virtual Reality.</li>
+                  <li>Optimized system performance of aircraft through AI/ML techniques, including MIMO, precoding, and beamforming.</li>
+                  <li>Improved compression algorithms through ML to enhance multimedia data encoding and decoding, reducing bandwidth requirements.</li>
+                </ul>
+               </div>
+              </div>
             </div>
             <div class="resume-item">
               <h4>Autonomy Engineer (Developer)</h4>
               <h5>Jan. 2021 - Dec. 2022</h5>
               <p><em>Space Concordia, Montreal, CA</em></p>
-              <ul>
-                <li>Developed an autonomous rover dashboard for navigating Mars-like terrain using front-end camera visualization, obstacle avoidance algorithms, and computer vision. </li>
-                <li>Implemented advanced techniques in localization, mapping, navigation, path planning, and computer vision. </li>
-                <li>Integrated Teensy schematics with Jetson using C++, SQL, and Embedded C technologies to enhance robot capabilities.</li>
-                <li>Utilized Jenkins to create an autonomous server with build pipelines and real-time monitoring.</li>
-                <li>Implemented compression algorithms, achieving a 30% reduction in bandwidth requirements. </li>
-              </ul>
+              <div class="collapsible">
+               <input type="checkbox" name="collapsible-head" id="fourth">
+               <label for="fourth">Responsiblities</label>
+               <div class="collapsible-text">
+                  <ul>
+                    <li>Developed an autonomous rover dashboard for navigating Mars-like terrain using front-end camera visualization, obstacle avoidance algorithms, and computer vision. </li>
+                    <li>Implemented advanced techniques in localization, mapping, navigation, path planning, and computer vision. </li>
+                    <li>Integrated Teensy schematics with Jetson using C++, SQL, and Embedded C technologies to enhance robot capabilities.</li>
+                    <li>Utilized Jenkins to create an autonomous server with build pipelines and real-time monitoring.</li>
+                    <li>Implemented compression algorithms, achieving a 30% reduction in bandwidth requirements. </li>
+                  </ul>
+                  </div>
+                  </div>
             </div>
           </div>
           <div class="col-lg-6">
@@ -384,45 +409,69 @@
               <h4>Data Science Trainee</h4>
               <h5>Jan. 2020 - Dec. 2020</h5>
               <p><em>Coding Blocks, Delhi, IN</em></p>
-              <ul>
-                <li>Demonstrated proficiency in Web APIs, Scrapy web crawlers, and various data science libraries for ML model application projects.</li>
-                <li>Review team members' solutions for efficiency, scalability, and resilience to ensure quality and effectiveness.</li>
-                <li>Leveraged Python, SQL, and data science libraries to extract valuable insights from data, applying machine learning models and Linear Algebra techniques. This optimization resulted in a significant 25% increase in overall system speed.</li>
-                <li>Devise and employ algorithms and models to extract insights from large-scale data sets. Conduct data and error analysis to enhance models. Ensure data uniformity and accuracy through thorough cleaning and validation processes.</li>
-              </ul>
+              <div class="collapsible">
+                <input type="checkbox" name="collapsible-head" id="fifth">
+                <label for="fifth">Responsiblities</label>
+                <div class="collapsible-text">
+                  <ul>
+                    <li>Demonstrated proficiency in Web APIs, Scrapy web crawlers, and various data science libraries for ML model application projects.</li>
+                    <li>Review team members' solutions for efficiency, scalability, and resilience to ensure quality and effectiveness.</li>
+                    <li>Leveraged Python, SQL, and data science libraries to extract valuable insights from data, applying machine learning models and Linear Algebra techniques. This optimization resulted in a significant 25% increase in overall system speed.</li>
+                    <li>Devise and employ algorithms and models to extract insights from large-scale data sets. Conduct data and error analysis to enhance models. Ensure data uniformity and accuracy through thorough cleaning and validation processes.</li>
+                  </ul>
+                  </div>
+                  </div>
             </div>
             <div class="resume-item">
               <h4>Business Analyst</h4>
               <h5>Jan. 2019 – Aug. 2019</h5>
               <p><em>Cuemath, Delhi, IN </em></p>
-              <ul>
-                <li>Lead and manage a team of data analysts to develop and execute a weekly deployment plan for field sales agents, utilizing complex data and analytics tools like Teradata, Tableau, and Salesforce.</li>
-                <li>Oversee data transformation and supply of campaign leads through Salesforce CRM, ensuring accuracy and timeliness. </li>
-                <li>Investigate and resolve data issues, maintaining data integrity and compliance with sales lead activity guidelines.</li>
-                <li>Analyze and evaluate territory and channel performance, generating reports and providing insights to stakeholders.</li>
-              </ul>
+              <div class="collapsible">
+                <input type="checkbox" name="collapsible-head" id="sixth">
+                <label for="sixth">Responsiblities</label>
+                <div class="collapsible-text">
+                  <ul>
+                    <li>Lead and manage a team of data analysts to develop and execute a weekly deployment plan for field sales agents, utilizing complex data and analytics tools like Teradata, Tableau, and Salesforce.</li>
+                    <li>Oversee data transformation and supply of campaign leads through Salesforce CRM, ensuring accuracy and timeliness. </li>
+                    <li>Investigate and resolve data issues, maintaining data integrity and compliance with sales lead activity guidelines.</li>
+                    <li>Analyze and evaluate territory and channel performance, generating reports and providing insights to stakeholders.</li>
+                  </ul>
+                  </div>
+                  </div>
             </div>
             <div class="resume-item">
               <h4>Network Engineer Trainee</h4>
               <h5>Jan. 2019 – Dec. 2019</h5>
               <p><em>Network Bulls, Delhi, IN</em></p>
-              <ul>
-                <li>Implementing Cisco Enterprise Network Core Technologies like routing (BGP), and switching with different algorithms to give quality of service with security by figuring out possible errors through LAN/WAN of Data centres.</li>
-                <li>Practical training in dual-stack (IPv4 and Ipv6) architecture, network assurance, HTTP, security, and automation. Continuously monitor the IPS dashboard or management console to detect and respond to security events in real time.</li>
-                <li>System and Link level modeling and analysing the overall behaviour of a communication system, focusing on the physical layer (L1/PHY) and medium access control layer suing NS-3 and Packet tracer.</li>
-                <li>Using Wireshark network protocol analyser and packet capture tool for network troubleshooting, analysis, and protocol development.</li>
-              </ul>
+              <div class="collapsible">
+                <input type="checkbox" name="collapsible-head" id="seventh">
+                <label for="seventh">Responsiblities</label>
+                <div class="collapsible-text">
+                  <ul>
+                    <li>Implementing Cisco Enterprise Network Core Technologies like routing (BGP), and switching with different algorithms to give quality of service with security by figuring out possible errors through LAN/WAN of Data centres.</li>
+                    <li>Practical training in dual-stack (IPv4 and Ipv6) architecture, network assurance, HTTP, security, and automation. Continuously monitor the IPS dashboard or management console to detect and respond to security events in real time.</li>
+                    <li>System and Link level modeling and analysing the overall behaviour of a communication system, focusing on the physical layer (L1/PHY) and medium access control layer suing NS-3 and Packet tracer.</li>
+                    <li>Using Wireshark network protocol analyser and packet capture tool for network troubleshooting, analysis, and protocol development.</li>
+                  </ul>
+                  </div>
+                  </div>
             </div>
             <div class="resume-item">
               <h4>Telecommunication Trainee</h4>
               <h5>Apr. 2017 – Aug. 2017</h5>
               <p><em>Huawei, Delhi, IN</em></p>
-              <ul>
-                <li>Working on wireless Fundamentals, transmission fundamentals, and their routing and switching with security. GSM interfaces and core network structure with GPRS and GGSN network components and XML protocols.</li>
-                <li>Adopting Cloud computing solutions and cloud-based services and performing portability across platforms. Operations in the OSI and TCP models. Configuring and verifying RIP, OSPF, and VLAN.</li>
-                <li>Understanding the 3GPP standards processes to enhance in the development and implementation of wireless communication systems in the field of Radio access network (RAN Working groups).</li>
-                <li>Using multiple antennas at both the transmitter and receiver to improve data throughput and enhance system reliability by Precoding and beamforming methods in MIMO systems.</li>
-              </ul>
+              <div class="collapsible">
+                <input type="checkbox" name="collapsible-head" id="eighth">
+                <label for="eighth">Responsiblities</label>
+                <div class="collapsible-text">
+                  <ul>
+                    <li>Working on wireless Fundamentals, transmission fundamentals, and their routing and switching with security. GSM interfaces and core network structure with GPRS and GGSN network components and XML protocols.</li>
+                    <li>Adopting Cloud computing solutions and cloud-based services and performing portability across platforms. Operations in the OSI and TCP models. Configuring and verifying RIP, OSPF, and VLAN.</li>
+                    <li>Understanding the 3GPP standards processes to enhance in the development and implementation of wireless communication systems in the field of Radio access network (RAN Working groups).</li>
+                    <li>Using multiple antennas at both the transmitter and receiver to improve data throughput and enhance system reliability by Precoding and beamforming methods in MIMO systems.</li>
+                  </ul>
+                  </div>
+                  </div>
             </div>
           </div>
         </div>
@@ -663,7 +712,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="https://formsubmit.co/your@email.com" method="POST" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>

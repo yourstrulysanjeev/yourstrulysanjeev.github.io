@@ -168,6 +168,13 @@
       }
     })
   }
+// Get the element you want to make collapsible
+const collapsibleElement = document.querySelector('.collapsible-text');
+
+// Toggle the collapsed class on the element when clicked
+collapsibleElement.addEventListener('click', function() {
+  this.classList.toggle('collapsed');
+});
 
   /**
    * Porfolio isotope and filter
