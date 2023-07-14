@@ -1,9 +1,10 @@
 
 :root{
-  --primary-color:#f7f1f1da; 
+   --primary-color:#f7f1f1da;
+   --main-color:#f7f1f1da;  
    --secondary-color:#45505b;
    --third-color:#272829;
-   --fourth--color: rgba(255, 255, 255, 0.8);
+   --hero-color: rgba(255, 255, 255, 0.8);
    --fifth--color:#4b5763;
    --sixth--color: #0563bb;
    --picture:url("../img/hero-bg.jpg");
@@ -12,10 +13,11 @@
    --skill-name-color:#45505b;
 }
 .dark-theme{
- --primary-color:#333536; 
+ --primary-color:#333536;
+ --main-color:#333536;  
  --secondary-color:hsl(246, 78%, 78%);
  --third-color:#ffffff;
- --fourth--color:rgba(83, 72, 72, 0.884);
+ --hero-color:rgba(83, 72, 72, 0.884);
  --fifth--color:#9b7f5b;
  --sixth--color: #488573;
  --picture:url("../img/hero-bg2.jpg");
@@ -23,12 +25,27 @@
  --progress-color:#ccf7a88c;
  --skill-name-color:#0563bb;
 }
-
 #icon{
- width: 30px;
- cursor:pointer;
+  width: 30px;
+  cursor:pointer;
+ }
+/* *{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
 }
-
+.container{
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(45deg, red,violet, yellow,blue);
+  background-size: 300% 300%;
+  animation: color 12s ease-in-out infinite;
+}
+@keyframes color{
+  0%{
+  background-position: 0 50%;
+}
+} */
 /* .header-dark-icon{
   width: 30px;
   cursor:pointer;
@@ -40,7 +57,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: var(--third-color);
-  background-color:var(--primary-color);
+  background-color:var(--main-color);
 }
 
 a {
@@ -317,7 +334,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: var(--fourth--color);
+  background: var(--hero-color);
   position: absolute;
   bottom: 0;
   top: 0;
