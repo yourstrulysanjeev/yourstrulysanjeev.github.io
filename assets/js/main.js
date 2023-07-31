@@ -1,10 +1,4 @@
-/**
-* Template Name: MyResume
-* Updated: Jun 13 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
@@ -275,3 +269,143 @@ collapsibleElement.addEventListener('click', function() {
   new PureCounter();
 
 })()
+
+ //----------------------------- Skill --------------------------------------
+
+  // Array of skills data
+  const skillsData = [
+    { name: " Deep Leanrning and ML Models ", level: 75, icon: "fa-solid fa-brain"},
+    { name: " Developer tools and Devops", level: 80, icon: "fa-solid fa-database" },
+    { name: " Visualization Tools and Analysis", level: 85, icon: "fa-solid fa-chart-simple" },
+    // { name: "SQL", level: 90 },
+    // { name: "Tableau", level: 95 },
+    // { name: "Power BI", level: 85 },
+    // { name: "Machine Learninig", level: 90 },
+    // { name: "Microsoft Visio", level: 80 },
+    // { name: "Big Data", level: 90 },
+    // { name: "Business Intelligence", level: 90 },
+    // { name: "Data Analysis", level: 100 },
+    // { name: "Statistical Modeling", level: 90 },
+    // { name: "Data Mining ", level: 90 },
+    // { name: "MATLAB", level: 90 },
+    // { name: "AWS", level: 80 },
+    // { name: "C++", level: 90 },
+    // { name: "Azure", level: 70 },
+    // { name: "Django", level: 85 },
+    // { name: "API", level: 80 },
+    // { name: "Git", level: 90 },
+    // { name: "Flask ", level: 85 },
+    // { name: "Microsoft Excel", level: 90 },
+    // { name: "ROS", level: 70 },
+    // { name: "DevOps ", level: 75 },
+    // { name: "Apache Spark", level: 70 },
+    // Add more skills here...
+  ];
+
+  // Function to generate the skills HTML
+  function generateSkillsHTML() {
+    const skillsContainer = document.getElementById("skills-content");
+
+    for (const skill of skillsData) {
+      const skillHTML = `
+        <div class="col-lg-6">
+          <div class="progress">
+          <span class="skill">
+          <i class="${skill.icon}"></i>&nbsp;&nbsp;${skill.name} <i class="val">&nbsp;&nbsp;${skill.level}%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="${skill.level}" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      skillsContainer.insertAdjacentHTML("beforeend", skillHTML);
+    }
+  }
+
+  // Call the function to generate skills on page load
+  generateSkillsHTML();
+
+
+ //----------------------------- Projects --------------------------------------
+
+//Project Data Array 
+
+//    const projectsData = [
+//      {
+//        title: "NBA Analysis",
+//        category: "filter-Analysis",
+//        imageSrc: "assets/img/portfolio/portfolio-1.jpg",
+//        description: "Exploring Seaborn with NBA dataset",
+//        detailsPageLink: "portfolio-details1.html"
+//      },
+//      {
+//        title: "Stock Price Prediction",
+//        category: "filter-ML",
+//        imageSrc: "assets/img/portfolio/portfolio-2.jpg",
+//        description: "Google Stock Price Prediction using RNN And LSTM",
+//        detailsPageLink: "portfolio-details2.html"
+//      },
+//      // Add more project data objects here for other projects
+//      // {
+//      //   title: "Project Title",
+//      //   category: "filter-Category", // Choose the appropriate category for each project
+//      //   imageSrc: "path/to/image",
+//      //   description: "Project Description",
+//      //   detailsPageLink: "path/to/details"
+//      // },
+//    ];
+
+
+// //Loop through projectsData to create project items
+
+//    for (const project of projectsData) {
+//      const projectItemHtml = `
+//        <div class="col-lg-4 col-md-6 portfolio-item ${project.category}">
+//          <div class="portfolio-wrap">
+//            <img src="${project.imageSrc}" class="img-fluid" alt="">
+//            <div class="portfolio-info">
+//              <h4>${project.title}</h4>
+//              <p>${project.description}</p>
+//              <div class="portfolio-links">
+//                <a href="${project.imageSrc}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${project.title}"><i class="bx bx-plus"></i></a>
+//                <a href="${project.detailsPageLink}" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+//              </div>
+//            </div>
+//          </div>
+//        </div>
+//      `;
+//      document.querySelector('.portfolio-container').insertAdjacentHTML('beforeend', projectItemHtml);
+//    }
+
+function toggleRelevantCourses(courseId) {
+  const relevantCourses = document.getElementById(courseId);
+  const showMoreBtn = document.getElementById(`showMoreBtn${courseId.slice(-1)}`);
+
+  if (relevantCourses.style.display === "none") {
+    relevantCourses.style.display = "inline";
+    showMoreBtn.textContent = "Show Less";
+  } else {
+    relevantCourses.style.display = "none";
+    showMoreBtn.textContent = "Show More";
+  }
+}
+
+// dark mode icon
+
+var icon = document.getElementById("icon");
+
+icon.onclick = function(){
+  document.body.classList.toggle("dark-theme");
+  if(document.body.classList.contains("dark-theme")){
+    icon.src = "assets/img/sun.png";
+  }else{
+    icon.src = "assets/img/moon.png";
+  }
+}
+
+// scroll contact
+
+document.getElementById('contact-button').addEventListener('click', function() {
+  document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+});

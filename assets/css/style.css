@@ -1,7 +1,7 @@
 
 :root{
    --primary-color:#f7f1f1da;
-   --main-color:#f7f1f1da;  
+   --main-color:rgba(247, 241, 241, 0.856);  
    --secondary-color:#45505b;
    --third-color:#272829;
    --hero-color: rgba(255, 255, 255, 0.8);
@@ -11,8 +11,9 @@
    --headline-color:#1b66b1;
    --progress-color:#067dedb2;
    --skill-name-color:#45505b;
+   --cert-color:DodgerBlue;
 }
-.dark-theme{
+body.dark-theme{
  --primary-color:#333536;
  --main-color:#333536;  
  --secondary-color:hsl(246, 78%, 78%);
@@ -24,6 +25,7 @@
  --headline-color:#a8c0ca;
  --progress-color:#ccf7a88c;
  --skill-name-color:#0563bb;
+ --cert-color:#35ad3b81;
 }
 #icon{
   width: 30px;
@@ -377,6 +379,7 @@ h6 {
 
 #hero .social-links a:hover {
   color: var(--sixth--color);
+  animation: heartbeat 1s ease-in-out infinite;
 }
 
 @media (max-width: 992px) {
@@ -444,7 +447,18 @@ section {
 .section-title p {
   margin-bottom: 0;
 }
+.col-lg-4 img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 5px;
+  /* cursor: pointer; */
+  transition: transform 0.3s ease-in-out;
+}
 
+/* Apply the heartbeat animation on hover */
+.col-lg-4 img:hover {
+  animation: heartbeat 2s infinite;
+}
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -496,10 +510,17 @@ section {
 .buttons button:hover{
   color: var(--sixth--color);
   background-color: var(--primary-color);
+  animation: heartbeat 1s infinite;
 }
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
+.skills-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 20px;
+}
 .skills .progress {
   height: 60px;
   display: block;
@@ -512,9 +533,10 @@ section {
   margin: 0;
   text-transform: uppercase;
   display: block;
-  font-weight: 600;
+  font-weight: bold; /* Make the skill name thicker */
   font-family: "Poppins", sans-serif;
   color: var(--skill-name-color);
+  font-size: 18px; /* Increase the font size for the skill name */
 }
 
 .skills .progress .skill .val {
@@ -531,6 +553,13 @@ section {
   height: 10px;
   transition: 0.9s;
   background-color: var(--progress-color);
+}
+.skill i {
+  font-size: 20px; /* Increase the font size for the icon */
+  padding-right: 10px; /* Add padding to the right of the icon to prevent clipping */
+}
+.skill i:hover {
+  animation: heartbeat 1s infinite;
 }
 
 /*--------------------------------------------------------------
@@ -652,6 +681,139 @@ label::before{
 /*--------------------------------------------------------------
 # Projects
 --------------------------------------------------------------*/
+#skills h3 {
+  font-size: 28px; /* Adjust the font size to make it bigger */
+  color: var(--secondary-color); /* Set the desired color for the <h3> */
+  padding: 20px 0; /* Add padding on top and bottom */
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Adjust this property to change alignment */
+}
+.skill-icons-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px; /* Adjust the value to control the space between skills */
+  padding-bottom: 40px;
+}
+.skill-icons-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px; /* Adjust the value to control the space between skills */
+  padding-bottom: 40px;
+}
+.skill-bg {
+  display: flex;
+  flex-direction: column; /* Stack the icon and name vertically */
+  align-items: center;
+  margin: 10px; /* Center the skill name text */
+}
+.skill-bg .fa-brands,
+  .skill-bg .fa-solid,
+  .skill-bg .fa {
+    color: var(--third-color);
+    transition: transform 0.2s, color 0.2s; /* Add a transition effect for smoother scaling */
+    font-size: 40px; /* Adjust the font size to control the icon size */
+    /* display: inline-flex; */
+    cursor: pointer;
+    /* place-items: center; */
+  }
+  .skill-bg .fa-brands:hover,
+  .skill-bg .fa-solid:hover,
+  .skill-bg .fa:hover {
+    animation: heartbeat 1s; /* Apply heartbeat animation on hover */
+    color: #1a8abece; /* Change the color on hover (you can adjust the color as needed) */
+    transform: scale(1.5); /* Scale up the icons on hover */
+  }
+  /* Additional CSS to style the skill icon and name */
+.skill-bg i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  margin-top: 5px;
+  font-size: 14px;
+  color: var(--skill-name-color);
+  text-align: center;
+}
+
+@keyframes heartbeat {
+  0% {
+      transform: scale(1); /* Start at the default scale */
+  }
+  50% {
+      transform: scale(1.2); /* Scale up to 1.2 at 50% of the animation duration */
+  }
+  100% {
+      transform: scale(1); /* Return to the default scale at the end */
+  }
+}
+
+.show-more-btn {
+  background: transparent;
+  border: 1cap solid var(--progress-color);
+  color:  var(--progress-color);
+  padding: 4px 15px;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background-color: #6095c78e;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+  .certificate {
+    margin-bottom: 10px;
+  }
+
+  .certificate-link a {
+    color: #e56b6f;
+    margin-right: 5px;
+  }
+
+  .certificate strong {
+    color: var(--cert-color);
+  }
+
+  .certificate-year {
+    color: var(--third-color);
+    float: right;
+  }
+
+  /* Dark Mode Toggle Styles */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+@media screen and (max-width: 768px) {
+  .dark-mode-toggle {
+    top: 60px; /* Adjust the top value to create proper spacing */
+    right: 20px;
+  }
+  .skills {
+    justify-content: center; /* Align to the center on smaller screens */
+  }
+}
+@media screen and (min-width: 768px) {
+  .about-heading {
+    display: block; /* Make the heading a block-level element to occupy full width */
+    text-align: center; /* Align the heading to the right side */
+    margin-left: 30%; /* Adjust the margin to position it on the right side of center */
+  }
+}
+/* -------------------- */
+
+
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
@@ -681,7 +843,7 @@ label::before{
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #0563bb;
+  color:#1a8abece;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -698,7 +860,7 @@ label::before{
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: var(--primary-color);
+  background: var(--hero-color);
   position: absolute;
   left: 30px;
   right: 30px;
@@ -897,14 +1059,14 @@ label::before{
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: var(--secondary-color);
+  color: var(--third-color);
 }
 
 .contact .info p {
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
-  color: #728394;
+  color: var(--headline-color);
 }
 
 .contact .info .email,
@@ -915,11 +1077,11 @@ label::before{
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #0563bb;
+  background: #1a8abece;;
   color: var(--primary-color);
 }
 
-.contact .php-email-form {
+/* .contact .php-email-form {
   width: 100%;
   background: var(--primary-color);
 }
@@ -931,7 +1093,7 @@ label::before{
 .contact .php-email-form .error-message {
   display: none;
   color: var(--primary-color);
-  background: #ed3c0d;
+  background: #a76654;
   text-align: left;
   padding: 15px;
   font-weight: 600;
@@ -995,8 +1157,8 @@ label::before{
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #0678e3;
-}
+  background: #1a8abece;
+} */
 
 @keyframes animate-loading {
   0% {
@@ -1042,7 +1204,7 @@ label::before{
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #0563bb;
+  background: var(--third-color);
   color: var(--primary-color);
   line-height: 1;
   padding: 8px 0;
@@ -1052,12 +1214,14 @@ label::before{
   width: 36px;
   height: 36px;
   transition: 0.3s;
+  position: relative; /* Added for positioning the animated pseudo-element */
 }
 
 #footer .social-links a:hover {
-  background: #0678e3;
+  background: #1a8abece;
   color: var(--primary-color);
   text-decoration: none;
+  animation: heartbeat 1s ease-in-out infinite;
 }
 
 #footer .copyright {
