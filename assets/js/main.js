@@ -274,8 +274,8 @@ collapsibleElement.addEventListener('click', function() {
 
   // Array of skills data
   const skillsData = [
-    { name: " Deep Leanrning and ML Models ", level: 75, icon: "fa-solid fa-brain"},
-    { name: " Developer tools and Devops", level: 80, icon: "fa-solid fa-database" },
+    { name: " Deep Leanrning, ML Models and Computer Vision ", level: 75, icon: "fa-solid fa-brain"},
+    { name: " Developer tools and MLOps", level: 80, icon: "fa-solid fa-database" },
     { name: " Visualization Tools and Analysis", level: 85, icon: "fa-solid fa-chart-simple" },
     // { name: "SQL", level: 90 },
     // { name: "Tableau", level: 95 },
@@ -284,21 +284,6 @@ collapsibleElement.addEventListener('click', function() {
     // { name: "Microsoft Visio", level: 80 },
     // { name: "Big Data", level: 90 },
     // { name: "Business Intelligence", level: 90 },
-    // { name: "Data Analysis", level: 100 },
-    // { name: "Statistical Modeling", level: 90 },
-    // { name: "Data Mining ", level: 90 },
-    // { name: "MATLAB", level: 90 },
-    // { name: "AWS", level: 80 },
-    // { name: "C++", level: 90 },
-    // { name: "Azure", level: 70 },
-    // { name: "Django", level: 85 },
-    // { name: "API", level: 80 },
-    // { name: "Git", level: 90 },
-    // { name: "Flask ", level: 85 },
-    // { name: "Microsoft Excel", level: 90 },
-    // { name: "ROS", level: 70 },
-    // { name: "DevOps ", level: 75 },
-    // { name: "Apache Spark", level: 70 },
     // Add more skills here...
   ];
 

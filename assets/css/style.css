@@ -712,8 +712,8 @@ label::before{
   margin: 10px; /* Center the skill name text */
 }
 .skill-bg .fa-brands,
-  .skill-bg .fa-solid,
-  .skill-bg .fa {
+.skill-bg .fa-solid,
+.skill-bg .fa {
     color: var(--third-color);
     transition: transform 0.2s, color 0.2s; /* Add a transition effect for smoother scaling */
     font-size: 40px; /* Adjust the font size to control the icon size */
