@@ -7,7 +7,7 @@
    --hero-color: rgba(255, 255, 255, 0.8);
    --fifth--color:#4b5763;
    --sixth--color: #0563bb;
-   --picture:url("../img/hero-bg.jpg");
+   --picture:url("../img/hero-bg.png");
    --headline-color:#1b66b1;
    --progress-color:#067dedb2;
    --skill-name-color:#45505b;
@@ -448,16 +448,14 @@ section {
   margin-bottom: 0;
 }
 .col-lg-4 img {
-  width: 100%;
-  max-width: 100%;
-  border-radius: 5px;
-  /* cursor: pointer; */
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ;
 }
-
+.col-lg-4-img-container {
+  perspective: 1000px; /* Set the perspective for 3D animation */
+}
 /* Apply the heartbeat animation on hover */
 .col-lg-4 img:hover {
-  animation: heartbeat 2s infinite;
+  transform: rotateY(180deg);
 }
 /*--------------------------------------------------------------
 # About
