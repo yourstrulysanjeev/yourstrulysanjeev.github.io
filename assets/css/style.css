@@ -7,7 +7,7 @@
    --hero-color: rgba(255, 255, 255, 0.8);
    --fifth--color:#4b5763;
    --sixth--color: #0563bb;
-   --picture:url("../img/hero-bg.png");
+   /* --picture:url("../img/hero-bg.png"); */
    --headline-color:#1b66b1;
    --progress-color:#067dedb2;
    --skill-name-color:#45505b;
@@ -323,10 +323,24 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: var(--picture) top right no-repeat;
+  /* background: var(--picture) top right no-repeat; */
   background-size: cover;
   position: relative;
 }
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Place the video behind other content */
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 4s;
+}
+
 
 @media (min-width: 992px) {
   #hero {

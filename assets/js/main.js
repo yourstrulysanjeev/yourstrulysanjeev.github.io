@@ -274,9 +274,9 @@ collapsibleElement.addEventListener('click', function() {
 
   // Array of skills data
   const skillsData = [
-    { name: " Deep Leanrning, ML Models and Computer Vision ", level: 75, icon: "fa-solid fa-brain"},
-    { name: " Developer tools and MLOps", level: 80, icon: "fa-solid fa-database" },
-    { name: " Visualization Tools and Analysis", level: 85, icon: "fa-solid fa-chart-simple" },
+    { name: " Deep Leanrning and ML Models ", level: 75, icon: "fa-solid fa-brain"},
+    { name: " Data Governance and Analysis ", level: 80, icon: "fa-solid fa-database" },
+    { name: " Visualization Tools and Reporting", level: 85, icon: "fa-solid fa-chart-simple" },
     // { name: "SQL", level: 90 },
     // { name: "Tableau", level: 95 },
     // { name: "Power BI", level: 85 },
@@ -394,3 +394,8 @@ icon.onclick = function(){
 document.getElementById('contact-button').addEventListener('click', function() {
   document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
 });
+
+const video = document.getElementById('background-video');
+video.addEventListener('ended', () => {
+  video.classList.add('fade-out');
+})
